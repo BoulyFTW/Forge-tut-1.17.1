@@ -20,7 +20,10 @@ public class ModBlocks {
             DeferredRegister.create(ForgeRegistries.BLOCKS, TutorialMod.MOD_ID);
 
 public static final RegistryObject<Block> TITANIUM_BLOCK = registerBlock("titanium_block",
-        () -> new Block(BlockBehaviour.Properties.of(Material.METAL).strength(10f)));
+        () -> new Block(BlockBehaviour.Properties.of(Material.METAL).strength(6f)));
+
+    public static final RegistryObject<Block> TITANIUM_ORE = registerBlock("titanium_ore",
+            () -> new Block(BlockBehaviour.Properties.of(Material.METAL).strength(3f)));
 
     private static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
