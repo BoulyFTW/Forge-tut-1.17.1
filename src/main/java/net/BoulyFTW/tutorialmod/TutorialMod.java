@@ -1,5 +1,6 @@
 package net.BoulyFTW.tutorialmod;
 
+import net.BoulyFTW.tutorialmod.block.ModBlocks;
 import net.BoulyFTW.tutorialmod.item.ModItems;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
@@ -31,7 +32,8 @@ public class TutorialMod
     public TutorialMod() {
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
-        ModItems.register((eventBus));
+        ModItems.register(eventBus);
+        ModBlocks.register(eventBus);
 
         eventBus.addListener(this::setup);
         // Register ourselves for server and other game events we are interested in
