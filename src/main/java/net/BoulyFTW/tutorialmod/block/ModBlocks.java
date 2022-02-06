@@ -1,6 +1,7 @@
 package net.BoulyFTW.tutorialmod.block;
 
 import net.BoulyFTW.tutorialmod.TutorialMod;
+import net.BoulyFTW.tutorialmod.block.custom.SpeedyBlock;
 import net.BoulyFTW.tutorialmod.item.ModCreativeModeTab;
 import net.BoulyFTW.tutorialmod.item.ModItems;
 import net.minecraft.world.item.BlockItem;
@@ -25,6 +26,10 @@ public static final RegistryObject<Block> TITANIUM_BLOCK = registerBlock("titani
 
     public static final RegistryObject<Block> TITANIUM_ORE = registerBlock("titanium_ore",
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(10f).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> SPEEDY_BLOCK = registerBlock("speedy_block",
+            () -> new SpeedyBlock(BlockBehaviour.Properties.of(Material.STONE).strength(5f).requiresCorrectToolForDrops()));
+
 
     private static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
