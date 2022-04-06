@@ -49,6 +49,10 @@ public class ModItems {
             () -> new HoeItem(ModTiers.TITANIUM, 0, 1f,
                     new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB)));
 
+    public static final RegistryObject<Item> GODWEPON = ITEMS.register( "godwepon",
+            () -> new SwordItem(ModTiers.TITANIUM, 69413, 69f,
+                    new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB)));
+
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

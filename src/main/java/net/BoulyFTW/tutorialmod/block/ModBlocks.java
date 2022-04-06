@@ -27,6 +27,9 @@ public static final RegistryObject<Block> TITANIUM_BLOCK = registerBlock("titani
     public static final RegistryObject<Block> TITANIUM_ORE = registerBlock("titanium_ore",
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(10f).requiresCorrectToolForDrops()));
 
+    public static final RegistryObject<Block> POOP_BLOCK = registerBlock("poop_block",
+            () -> new Block(BlockBehaviour.Properties.of(Material.DIRT).strength(0.05f).requiresCorrectToolForDrops()));
+
     public static final RegistryObject<Block> SPEEDY_BLOCK = registerBlock("speedy_block",
             () -> new SpeedyBlock(BlockBehaviour.Properties.of(Material.STONE).strength(5f).requiresCorrectToolForDrops()));
 
